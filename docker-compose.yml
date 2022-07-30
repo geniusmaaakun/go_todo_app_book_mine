@@ -1,0 +1,13 @@
+version: "3.9"
+# ref: https://docs.docker.com/compose/compose-file
+services:
+  app:
+    image: gotodo
+    build:
+      #ホットリロードの環境を指定
+      args:
+        - target=dev
+    volumes:
+      - .:/app
+    ports:
+      - "18000:80"
