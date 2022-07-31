@@ -1,0 +1,12 @@
+データベース設定
+
+マイグレーションツール
+Makefile更新
+Docker起動
+
+github actionsでもSQLコンテナを起動する
+test.yamlに設定追加
+
+sqlxを使う
+sqlに対するテストコード
+github actionsで実行される

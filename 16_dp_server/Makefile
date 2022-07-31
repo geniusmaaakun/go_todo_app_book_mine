@@ -1,6 +1,3 @@
-#MakefileからDockerを起動する
-#make upでホットリロード環境で実行できる
-
 .PHONY: help build build-local up down logs ps test
 .DEFAULT_GOAL := help
 
@@ -27,7 +24,6 @@ ps: ## Check container status
 test: ## Execute tests
 	go test -race -shuffle=on ./...
 
-#ヘルプメッセージ
 help: ## Show options
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | \
 		awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-20s\033[0m %s\n", $$1, $$2}'
